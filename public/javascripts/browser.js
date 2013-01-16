@@ -36,6 +36,6 @@
     function addMessage(author, message, color, dt) {
         content.append('<p><span style="color:' + color + '">' + author + '</span> @ ' +
              + dt.getHours() + ':'
-             + dt.getMinutes() + '----' + message + '</p>');
+             + (dt.getMinutes()<10?('0'+ dt.getMinutes()):dt.getMinutes()) + '----' + message + '</p>');
     }
 });
