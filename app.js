@@ -35,9 +35,9 @@ var userColor = false;
     }
   });
   ws.on('close', function(){
+  var index = clients.indexOf(ws);
+  clients.splice(index, 1);
   if(userName !== false && userColor != false){
-    var index = clients.indexOf(ws);
-    clients.splice(index, 1);
     colors.push(userColor);
   }  
   });
